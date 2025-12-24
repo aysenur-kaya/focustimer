@@ -195,13 +195,21 @@
 
 @media (max-width: 480px) {
 
+  .worldclock-card{
+     max-width: 100%;
+    margin: 5px 3px;     /* 👈 yanları genişlettik */
+    padding: 8px 6px;   /* 👈 iç boşluk dengeli */
+    border-radius: 14px;
+  
+  }
+
   /* =========================
      WORLD CLOCK INFO – MOBILE CLEAN
   ========================= */
 
   .info-card {
-    margin: 8px 5px;
-    padding: 9px 7px;
+    margin: 5px 3px;
+    padding: 8px 6px;
     border-radius: 14px;
   }
 

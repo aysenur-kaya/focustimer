@@ -320,13 +320,23 @@
 
 @media (max-width: 480px) {
 
+
+  .timer-card{
+     max-width: 100%;
+    margin: 5px 3px;     
+    padding: 8px 6px;  
+    border-radius: 14px;
+  
+  }
+
+
   /* =========================
      TIMER INFO – MOBILE CLEAN
   ========================= */
 
   .timer-info {
-    margin: 8px 5px;
-    padding: 9px 7px;
+    margin: 5px 3px;
+    padding:  8px 6px;
     border-radius: 14px;
     box-shadow: none;           /* kart hissini hafiflet */
   }
