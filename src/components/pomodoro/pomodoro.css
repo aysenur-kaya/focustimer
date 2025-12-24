@@ -1,8 +1,4 @@
 
-
-
-
-
 body {
   margin: 0;
   padding: 0;
@@ -29,8 +25,6 @@ body {
   box-shadow: 5px 5px 65px rgba(124,108,255,0.35);
   color: #e5e7eb;
   text-align: center;
-
-  
 }
 
 .timer-container h2{
@@ -182,7 +176,6 @@ body {
 .btn-danger:active {
   transform: scale(0.96);
 }
-
 
 
 /* =====================================================
@@ -447,18 +440,51 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 460px) {
 
-  .timer-time {
-    font-size: 38px;
+  /* INFO SECTION – mobile sadeleştirme */
+
+  .pomodoro-info-section {
+    margin: 20px 14px;
+    padding: 22px 18px;
+    border-radius: 16px;
   }
 
-  .timer-controls button {
+  /* İç kartı iptal et */
+  .pomodoro-info {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .pomodoro-info h2 {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .pomodoro-info h3 {
+    font-size: 18px;
+    margin-top: 28px;
+    margin-bottom: 12px;
+  }
+
+  .pomodoro-info p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+
+  .pomodoro-info ul {
+    margin: 18px auto;
+    padding: 0;
+  }
+
+  .pomodoro-info li {
     font-size: 14px;
-  }
-
-  .setting-item label {
-    font-size: 12px;
+    margin-bottom: 10px;
   }
 }
+
 
