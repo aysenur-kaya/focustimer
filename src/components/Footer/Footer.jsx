@@ -1,6 +1,6 @@
 import { useLanguage } from "../../context/LanguageContext";
 import FooterNav from "./FooterNav";
-import "./footer.css";
+import "./Footer.css";
 import { Link } from "react-router-dom";
 
 
