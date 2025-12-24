@@ -1,0 +1,211 @@
+.worldclock-card {
+  max-width: 700px;
+  min-height: 300px;
+  margin: 40px auto;
+  padding: 28px 24px;
+  background: #0f172a;
+  border-radius: 18px;
+  box-shadow: 5px 5px 65px rgba(124,108,255,0.35);
+  color: #e5e7eb;
+  text-align: center;
+}
+
+.worldclock-card h2{
+  margin-bottom: 24px;
+}
+
+.worldclock-time {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 24px 0;
+  font-family: "Courier New", monospace;
+}
+
+.worldclock-search {
+  position: relative;
+}
+
+.worldclock-search input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.worldclock-search ul {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 0;
+  background: #020617;
+  border-radius: 10px;
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+.worldclock-search li {
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.worldclock-search li:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+
+.worldclock-country {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.worldclock-country img {
+  width: 32px;
+  height: 20px;
+  border-radius: 3px;
+}
+
+.worldclock-search li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.worldclock-search li img {
+  width: 24px;
+  height: 16px;
+  border-radius: 2px;
+}
+
+
+.info-card{
+  max-width: 700px;
+  min-height: 500px;
+  margin: 40px auto;
+  padding: 28px 24px;
+  background: #0f172a;
+  border-radius: 18px;
+  box-shadow: 5px 5px 65px rgba(124,108,255,0.35);
+  color: #e5e7eb;
+  text-align: center;
+
+}
+
+.worldclock-info{
+  max-width: 760px;
+  padding: 56px 52px;
+
+  border-radius: 32px;
+  box-shadow: 0 30px 45px rgba(0, 0, 0, 0.45) ;
+
+  text-align: center;
+
+}
+
+.worldclock-info h3{
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 24px;
+
+}
+
+.worldclock-info p{
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 680px;
+  margin: 0 auto 16px;
+
+}
+
+@media (max-width: 1024px) {
+
+  .worldclock-card,
+  .info-card,
+  .worldclock-info {
+    max-width: 640px;
+    margin: 32px auto;
+  }
+
+  .worldclock-time {
+    font-size: 42px;
+  }
+
+  .worldclock-info h3 {
+    font-size: 28px;
+  }
+
+  .worldclock-info p {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .worldclock-card,
+  .info-card,
+  .worldclock-info {
+    max-width: 100%;
+    margin: 24px 16px;
+    padding: 24px 18px;
+    border-radius: 16px;
+  }
+
+  .worldclock-time {
+    font-size: 36px;
+    letter-spacing: 1.5px;
+    margin: 20px 0;
+  }
+
+  /* SEARCH */
+  .worldclock-search input {
+    font-size: 15px;
+    padding: 12px 14px;
+  }
+
+  .worldclock-search li {
+    font-size: 15px;
+    padding: 12px 14px;
+  }
+
+  /* FLAGS */
+  .worldclock-country img {
+    width: 28px;
+    height: 18px;
+  }
+
+  .worldclock-search li img {
+    width: 22px;
+    height: 14px;
+  }
+
+  /* INFO */
+  .worldclock-info h3 {
+    font-size: 24px;
+  }
+
+  .worldclock-info p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .worldclock-time {
+    font-size: 32px;
+  }
+
+  .worldclock-search input {
+    font-size: 14px;
+  }
+
+  .worldclock-search li {
+    font-size: 14px;
+  }
+}
+
+

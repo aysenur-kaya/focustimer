@@ -1,0 +1,369 @@
+.app-header{
+  height: 72px;
+  padding:0 32px ;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  background-color: #f8fafc;
+  border-bottom: 4px solid #e5e7eb;
+
+   position: sticky;
+  top: 0;
+  z-index:1000 ; 
+   box-shadow:
+    0 28px 55px rgba(124,108,255,0.35),   /* ALT */
+    0 -28px 55px rgba(124,108,255,0.35);  /* ÜST */
+  
+  border-radius: 65px;
+  margin-top: 10px;
+}
+
+.header-title{
+  font-family: "Poppins", sans-serif ;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color:  #64748b;
+  margin: 0;
+}
+
+.header-left{
+  grid-column: 1;
+  justify-self: start ;
+}
+
+.header-center{
+  grid-column: 2;
+  justify-self: center;
+}
+
+.header-right{
+  grid-column: 3;
+  justify-self: end;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+
+.header-nav{
+  display: flex;
+  gap: 20px;
+  
+
+}
+
+.nav-link{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-shadow: 0 0 8px rgba(15, 23, 42, 0.15);
+
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+  text-decoration: none;
+  padding-bottom: 4px;
+  
+  transition: 
+  color 0.2s ease,
+  border-color 0.2s ease;
+}
+
+.nav-link-active{
+  color:#c8cad0;
+  font-weight:900;
+}
+
+
+.nav-link:hover{
+  color:#b8bfcd ;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+  background-color: #0f172a;
+
+  transition: width 0.2s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link-active::after{
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.language-switcher{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lang{
+  background: none;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0;
+}
+
+.lang.active{
+  color:#0f172a;
+  font-weight: 600;
+}
+
+.lang-divider{
+  color:  #cbd5e1;
+}
+
+.theme-toggle{
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.hamburger{
+  width: 32px;
+  height: 24px;
+  display: none;
+
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger span{
+  height: 3px;
+  width: 100%;
+  background-color: #0f172a;
+  border-radius: 2px;
+  transition: 
+    transform 0.3s ease,
+    opacity 0.2s ease;
+}
+
+
+.hamburger.open span:nth-child(1){
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2){
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3){
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+@media (max-width: 1024px) {
+
+  .app-header{
+    padding: 0 24px;
+  }
+
+  .header-nav{
+    gap: 14px;
+  }
+
+  .nav-link{
+    font-size: 13px;
+  }
+
+  .header-title{
+    font-size: 20px;
+  }
+
+   /* HAMBURGER GÖRÜNSÜN (tablet + mobile) */
+  .hamburger {
+    display: flex;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* NORMAL NAV GİZLENSİN */
+  .header-nav {
+    display: none;
+  }
+
+  /* DROPDOWN ALANI HAZIR */
+  .header-left {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background-color: #f8fafc;
+    border-bottom: 1px solid #e5e7eb;
+    z-index: 999;
+  }
+
+  .header-nav.open {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+
+  .app-header{
+    grid-template-columns: auto 1fr auto;
+    padding: 0 16px;
+    height: 64px;
+  }
+
+  /* HAMBURGER GÖRÜNSÜN */
+  .hamburger{
+    display: flex;
+     position: absolute;
+    left: 16px;   /* ← SOLA ALDIK */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .header-right{
+    gap: 12px;
+  }
+
+  /* SOL MENÜYÜ MOBILE’DA DROPDOWN YAP */
+  .header-left{
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background-color: #f8fafc;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .header-nav{
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .header-nav.open{
+    display: flex;
+  }
+
+
+  /* MERKEZ BAŞLIK KÜÇÜLSÜN */
+  .header-title{
+    font-size: 18px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE – TELEFON (<= 480px)
+   ===================================================== */
+@media (max-width: 480px) {
+
+  .app-header {
+    height: 60px;
+    padding: 0 14px;
+    margin-top: 6px;
+
+    border-radius: 32px; /* mobilde daha doğal */
+    box-shadow:
+      0 16px 40px rgba(124,108,255,0.28),
+      0 -16px 40px rgba(124,108,255,0.18);
+  }
+
+  /* HAMBURGER */
+  .hamburger {
+    width: 28px;
+    height: 20px;
+    left: 14px;
+  }
+
+  .hamburger span {
+    height: 2.5px;
+  }
+
+  /* MERKEZ BAŞLIK */
+  .header-title {
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* SAĞ ALAN */
+  .header-right {
+    gap: 10px;
+  }
+
+  .theme-toggle {
+    font-size: 15px;
+  }
+
+  .lang {
+    font-size: 12px;
+  }
+
+  /* DROPDOWN MENÜ */
+  .header-left {
+    top: 60px; /* header yüksekliğiyle hizalı */
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+
+    box-shadow:
+      0 20px 45px rgba(15,23,42,0.18);
+  }
+
+  .header-nav {
+    padding: 18px 16px;
+    gap: 18px;
+  }
+
+  .nav-link {
+    font-size: 15px;
+    padding: 10px 0;        /* parmak dostu */
+  }
+
+  /* Aktif link mobilde daha net */
+  .nav-link-active {
+    color: #0f172a;
+  }
+
+  .nav-link::after {
+    height: 3px;
+  }
+}
+

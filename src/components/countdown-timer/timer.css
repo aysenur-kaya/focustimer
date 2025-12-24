@@ -1,0 +1,334 @@
+/* =========================
+   TIMER CARD
+========================= */
+
+.timer-card {
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 16px;
+  background: #0f172a;
+  color: #f8fafc;
+  text-align: center;
+  box-shadow: 5px 5px 65px rgba(124,108,255,0.35);
+}
+
+.timer-card h2{
+  margin-bottom: 24px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.timer-inputs {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.timer-inputs input {
+  width: 80px;
+  padding: 8px;
+  text-align: center;
+  border-radius: 8px;
+  border: none;
+  background: #020617;
+  color: #f8fafc;
+  font-size: 14px;
+}
+
+/* =========================
+   DISPLAY
+========================= */
+
+.timer-display {
+  max-width: 360px;   /* 👈 EN KRİTİK SATIR */
+  margin: 30px auto;  /* 👈 ORTALAR */
+  padding: 18px 10px;
+  background-color: #020617;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+  font-family: "Courier New", monospace;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+
+  animation: tick 1s infinite;
+}
+
+@keyframes tick {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* =========================
+   CONTROLS
+========================= */
+
+.timer-controls {
+  
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.timer-controls button {
+  
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #1e293b;
+  color: #f8fafc;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow:  5px 5px 65px rgb(95, 237, 114);
+}
+
+.timer-controls button:hover {
+  background-color: #334155;
+}
+
+.timer-controls button:active {
+  transform: scale(0.96);
+}
+
+/* BUTTON VARIANTS */
+
+.timer-controls .primary {
+  background-color: #22c55e;
+  color: #022c22;
+}
+
+.timer-controls .primary:hover {
+  background-color: #16a34a;
+}
+
+.timer-controls .warning {
+  background-color: #facc15;
+  color: #422006;
+}
+
+.timer-controls .warning:hover {
+  background-color: #eab308;
+}
+
+.timer-controls .danger {
+  background-color: #ef4444;
+  color: #450a0a;
+}
+
+.timer-controls .danger:hover {
+  background-color: #dc2626;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 480px) {
+  .timer-display {
+    font-size: 36px;
+    padding: 12px 16px;
+  }
+
+  .timer-controls {
+    flex-wrap: wrap;
+  }
+
+  .timer-controls button {
+    width: 100%;
+  }
+}
+
+
+.timer-info {
+  max-width: 760px;
+  min-height: 700px;
+  margin: 40px auto;
+  padding: 28px 24px;
+  background: #0f172a ;
+  color:#e5e7eb  ;
+  border-radius: 18px;
+  box-shadow: 5px 5px 65px rgba(124,108,255,0.35);
+  text-align: center;
+
+}
+
+/* Başlıklar */
+.timer-info h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.timer-info h3 {
+  margin-top: 36px;
+  margin-bottom: 16px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Paragraflar */
+.timer-info p {
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 680px;
+  margin: 0 auto 16px;
+  
+}
+
+/* Listeler */
+.timer-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 24px auto;
+  max-width: 520px;
+}
+
+.timer-info li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  
+}
+
+/* Liste noktası */
+.timer-info li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  font-size: 22px;
+}
+
+/* Mobil uyum */
+@media (max-width: 768px) {
+  .timer-info {
+    padding: 40px 28px;
+    border-radius: 24px;
+  }
+
+  .timer-info h2 {
+    font-size: 26px;
+  }
+
+  .timer-info h3 {
+    font-size: 20px;
+  }
+
+  .timer-info p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .timer-card,
+  .timer-info {
+    max-width: 680px;
+    margin: 32px auto;
+  }
+
+  .timer-display {
+    max-width: 320px;
+    font-size: 42px;
+  }
+
+  .timer-info h2 {
+    font-size: 28px;
+  }
+
+  .timer-info h3 {
+    font-size: 21px;
+  }
+
+  .timer-info p {
+    font-size: 15.5px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .timer-card,
+  .timer-info {
+    max-width: 100%;
+    margin: 24px 16px;
+    padding: 24px 18px;
+    border-radius: 16px;
+  }
+
+  /* INPUTLAR */
+  .timer-inputs {
+    gap: 6px;
+  }
+
+  .timer-inputs input {
+    width: 64px;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  /* DISPLAY */
+  .timer-display {
+    max-width: 100%;
+    font-size: 38px;
+    padding: 14px 12px;
+    letter-spacing: 1.5px;
+  }
+
+  /* BUTTONLAR */
+  .timer-controls {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .timer-controls button {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  /* INFO */
+  .timer-info h2 {
+    font-size: 24px;
+  }
+
+  .timer-info h3 {
+    font-size: 19px;
+  }
+
+  .timer-info p {
+    font-size: 15px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .timer-display {
+    font-size: 34px;
+    padding: 12px;
+  }
+
+  .timer-inputs input {
+    width: 56px;
+    font-size: 14px;
+  }
+}
+
+

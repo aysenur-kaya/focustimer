@@ -1,0 +1,230 @@
+/* =====================================================
+   FOOTER – Pomodoro Card ile AYNI TASARIM
+   ===================================================== */
+
+/* Sayfa içindeki konum */
+.footer {
+   width: 100%;
+  margin-top: 160px;
+  padding: 48px 0;
+
+  /* ALT KISIM TAMAMEN KAPLANSIN */
+  background: #0f172a;
+  box-shadow: 0 18px 65px rgba(124,108,255,0.35);
+}
+
+/* Footer kartı */
+.footer-inner {
+  width: 100%;
+  /* max-width: 760px; */
+  margin: 0 auto;
+
+  background: #0f172a;                /* Pomodoro kart rengi */
+  padding: 24px 22px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  color: #e5e7eb;
+}
+
+/* -----------------------------------------------------
+   SOL ALAN (Logo – slogan – copyright)
+   ----------------------------------------------------- */
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-logo {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: #e5e7eb;
+  margin: 0;
+}
+
+.footer-slogan {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #cbd5f5;
+  max-width: 520px;
+  margin: 0;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 6px;
+}
+
+/* -----------------------------------------------------
+   FOOTER NAV (Menü linkleri)
+   ----------------------------------------------------- */
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+}
+
+/* Linkler */
+.footer-link {
+  font-size: 13px;
+  color: #cbd5e1;
+  text-decoration: none;
+
+  padding: 8px 12px;
+  border-radius: 10px;
+
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.footer-link:hover {
+  background: rgba(255,255,255,0.08);
+  color: #ffffff;
+}
+
+/* Active state footer'da bağırmaz */
+.footer-link.active {
+  background: rgba(255,255,255,0.12);
+  color: #ffffff;
+}
+
+
+.footer-legal {
+  width: 100%;
+  margin-top: 24px;
+  text-align: center;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.footer-legal a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  text-decoration: underline;
+}
+
+
+/* =====================================================
+   TABLET (>= 768px)
+   ===================================================== */
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 56px 0 ;   
+  }
+
+  .footer-inner {
+    padding: 28px 26px;
+    gap: 24px;
+  }
+
+  .footer-logo {
+    font-size: 15px;
+  }
+
+  .footer-slogan {
+    font-size: 13.5px;
+  }
+}
+
+/* =====================================================
+   DESKTOP (>= 1024px)
+   ===================================================== */
+
+@media (min-width: 1024px) {
+  .footer {
+     padding: 64px 0;
+     margin-top: 96px;   /* 160px → 96px */
+     position: relative;
+    
+  }
+
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+     max-width: 960px;
+    padding: 30px 28px;
+    gap: 32px;
+  }
+
+  .footer-left {
+    flex: 1;
+  }
+
+  .footer-nav {
+     display: flex;
+    flex-wrap: nowrap;
+    gap: 18px;
+
+    max-width: none;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+
+/* =====================================================
+   MOBILE (<= 480px)
+   ===================================================== */
+@media (max-width: 480px) {
+
+  .footer {
+    margin-top: 96px;       /* Mobilde çok boşluk olmasın */
+    padding: 32px 0;
+  }
+
+  .footer-inner {
+    padding: 20px 16px;
+    gap: 18px;
+  }
+
+  /* SOL ALAN */
+  .footer-left {
+    gap: 8px;
+  }
+
+  .footer-logo {
+    font-size: 13px;
+    letter-spacing: 0.15em;
+  }
+
+  .footer-slogan {
+    font-size: 12.5px;
+    line-height: 1.5;
+    max-width: 100%;
+  }
+
+  .footer-copy {
+    font-size: 11.5px;
+  }
+
+  /* NAV – mobilde düzenli grid */
+  .footer-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .footer-link {
+    font-size: 12.5px;
+    text-align: center;
+    padding: 8px 10px;
+  }
+
+  /* Legal */
+  .footer-legal {
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
