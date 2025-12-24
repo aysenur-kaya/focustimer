@@ -1,4 +1,6 @@
-import StopwatchTimer from "../components/STOPWATCH/StopwatchTimer"
+import StopwatchTimer from "../components/stopwatch/StopwatchTimer";
+
+
 
 export default function Stopwatch() {
   return(
