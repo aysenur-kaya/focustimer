@@ -320,14 +320,42 @@
 
 @media (max-width: 480px) {
 
-  .timer-display {
-    font-size: 34px;
-    padding: 12px;
+  /* =========================
+     TIMER INFO – MOBILE CLEAN
+  ========================= */
+
+  .timer-info {
+    margin: 8px 5px;
+    padding: 9px 7px;
+    border-radius: 14px;
+    box-shadow: none;           /* kart hissini hafiflet */
   }
 
-  .timer-inputs input {
-    width: 56px;
+  .timer-info h2 {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .timer-info h3 {
+    font-size: 18px;
+    margin-top: 26px;
+    margin-bottom: 12px;
+  }
+
+  .timer-info p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+
+  .timer-info ul {
+    margin: 18px auto;
+    padding: 0;
+  }
+
+  .timer-info li {
     font-size: 14px;
+    margin-bottom: 10px;
   }
 }
 

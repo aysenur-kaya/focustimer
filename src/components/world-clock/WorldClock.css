@@ -195,17 +195,34 @@
 
 @media (max-width: 480px) {
 
-  .worldclock-time {
-    font-size: 32px;
+  /* =========================
+     WORLD CLOCK INFO – MOBILE CLEAN
+  ========================= */
+
+  .info-card {
+    margin: 8px 5px;
+    padding: 9px 7px;
+    border-radius: 14px;
   }
 
-  .worldclock-search input {
-    font-size: 14px;
+  /* İç kartı iptal et */
+  .worldclock-info {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
   }
 
-  .worldclock-search li {
-    font-size: 14px;
+  .worldclock-info h3 {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .worldclock-info p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    margin-bottom: 14px;
   }
 }
-
 

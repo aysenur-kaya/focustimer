@@ -210,12 +210,34 @@
 
 @media (max-width: 480px) {
 
-  .stopwatch-display {
-    font-size: 32px;
+  /* =========================
+     STOPWATCH INFO – MOBILE CLEAN
+  ========================= */
+
+  .sw-info {
+    margin: 8px 5px;
+    padding: 9px 7px;
+    border-radius: 14px;
   }
 
-  .stopwatch-controls button {
-    font-size: 14px;
+  /* İç kartı kaldır */
+  .stopwatch-info {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .stopwatch-info h3 {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .stopwatch-info p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    margin-bottom: 14px;
   }
 }
 
