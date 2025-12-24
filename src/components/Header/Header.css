@@ -283,8 +283,11 @@
 
 
   /* MERKEZ BAŞLIK KÜÇÜLSÜN */
-  .header-title{
-    font-size: 18px;
+   .header-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
   }
 }
 
